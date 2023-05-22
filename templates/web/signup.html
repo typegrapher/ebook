@@ -1,0 +1,143 @@
+{% extends 'web/base.html' %} {% load static %} {% block content %}
+
+
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  
+
+</head>
+
+<body class="btn-style-4 btn-square sidebar-style-4">
+  <!--header Start-->
+  
+  <!--subheader Start-->
+  <div id="section-subheader">
+    <div class="sigma_subheader style-11 bg-cover bg-center dark-overlay"
+      style="background-image: url(/static/web/img/signup/1920x800-0.jpg)">
+      <div class="container d-block d-lg-flex align-items-center justify-content-between">
+        <div class="sigma_subheader-inner">
+          <h1 class="mb-4 mb-lg-0">Signup</h1>
+        </div>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a class="btn-link" href="#">Home</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">Signup</li>
+        </ol>
+      </div>
+    </div>
+    <!--subheader End-->
+  </div>
+
+  <!--signup Start-->
+  <div id="section-signup">
+    <div class="section">
+      <div class="container">
+        <div class="section-title centered">
+          <h3 class="title">Sign Up
+          </h3>
+          <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
+            eu feugiat
+            nulla facilisis.
+          </p>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <div class="sigma_form style-2">
+              <form method="post">
+              {% csrf_token %}
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <input type="text" name="fname" placeholder="First Name">
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <input type="text" name="lname" placeholder="Last Name">
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <button type="button">US</button>
+                        </div>
+                        <input type="number" name="phone" placeholder="+1">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <input type="email" name="email" placeholder="Email">
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <i class="fal fa-eye password-toggle show-password"></i>
+                      <input type="password" name="password" placeholder="Password">
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <i class="fal fa-eye password-toggle show-password"></i>
+                      <input type="password" name="cpassword" placeholder="Confirm Password">
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="d-flex align-items-center justify-content-center">
+                      <input type="checkbox" id="checkbox" name="checkbox" value="Remember Me">
+                      <label class="mb-0" for="checkbox">By Selecting This You Agree to the
+                        <a href="#">Privacy Policy</a>
+                        and
+                        <a href="#">Cookie Policy</a>
+                      </label>
+                    </div>
+                    <div class="text-center mt-3">
+                      <button type="submit">Signup</button>
+                    </div>
+                    <div class="sigma_form-seperator">
+                      <span>Or</span>
+                    </div>
+                    <div class="sigma_buttons text-center">
+                      <button type="button" class="facebook">
+                        <i class="fab fa-facebook-f ml-0 mr-2"></i>
+                        Facebook
+                      </button>
+                      <button type="button" class="google">
+                        <i class="fab fa-google ml-0 mr-2"></i>
+                        Google
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--signup End-->
+  </div>
+  <!--to-top Start-->
+  <div id="section-to-top">
+    <div class="sigma_top style-3">
+      <i class="far fa-arrow-up"></i>
+    </div>
+    <!--to-top End-->
+  </div>
+  <!--footer Start-->
+  <div id="section-footer">
+    
+    <!--footer End-->
+  </div>
+
+
+
+</body>
+
+
+</html>
+{% endblock %}

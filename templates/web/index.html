@@ -1,0 +1,862 @@
+
+{% extends 'web/base.html' %} {% load static %} {% block content %}
+
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  
+
+</head>
+
+<body class="btn-style-4 btn-square sidebar-style-4">
+  
+  <!--hero Start-->
+  <div id="section-hero">
+    <div class="sigma_banner">
+      <div class="sigma_banner-slider">
+        <div class="banner-slider-inner bg-center bg-cover dark-overlay"
+          style="background-image: url(/static/web/img/home-1/1920x800.jpg)">
+          <div class="sigma_banner-text">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8">
+                  <h5 class="primary-color">Sales Up To 60% Off</h5>
+                  <h1 class="title text-white">
+                    The Best Books <br> Of 2023
+                  </h1>
+                  <p class="text-white">We deliver books all over the world 10,000+ books in stock
+                  </p>
+                  <div class="banner-links d-flex align-items-center">
+                    <a href="{% url 'web:about' %}" class="sigma_btn light">Get Started</a>
+                    <a href="{% url 'web:shop' %}" class="sigma_btn ml-4">Shop now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="banner-slider-inner bg-center bg-cover dark-overlay"
+          style="background-image: url(/static/web/img/home-1/1920x800-0.jpg)">
+          <div class="sigma_banner-text">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8">
+                  <h5 class="primary-color">Book Mockup 2023</h5>
+                  <h1 class="title text-white">
+                    Top 20 Books <br> Of Year
+                  </h1>
+                  <p class="text-white">We deliver books all over the world 10,000+ books in stock
+                  </p>
+                  <div class="banner-links d-flex align-items-center">
+                    <a href="{% url 'web:about' %}" class="sigma_btn light">Get Started</a>
+                    <a href="{% url 'web:shop' %}" class="sigma_btn ml-4">Shop now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--hero End-->
+  </div>
+
+  <!--taxonomy Start-->
+  <div id="section-taxonomy">
+    <div class="section section-padding pt-0">
+      <div class="container">
+        <div class="section-title centered has-element">
+          <h3 class="title">Our Category</h3>
+        </div>
+        <div class="row">
+          <div class="col-lg-3 col-md-4">
+            <div class="sigma_category style-3">
+              <a href="{% url 'web:shop' %}">
+                <img src="/static/web/img/home-1/500-10.jpg" alt="category">
+                <div class="sigma_category-content">
+                  <h6>Money Books</h6>
+                  <span>745 Items</span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4">
+            <div class="sigma_category style-3">
+              <a href="{% url 'web:shop' %}">
+                <img src="/static/web/img/home-1/500-11.jpg" alt="category">
+                <div class="sigma_category-content">
+                  <h6>Children's Books</h6>
+                  <span>429 Items</span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4">
+            <div class="sigma_category style-3">
+              <a href="{% url 'web:shop' %}">
+                <img src="/static/web/img/home-1/500-12.jpg" alt="category">
+                <div class="sigma_category-content">
+                  <h6>Travel Books</h6>
+                  <span>356 Items</span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4">
+            <div class="sigma_category style-3">
+              <a href="{% url 'web:shop' %}">
+                <img src="/static/web/img/home-1/500-13.jpg" alt="category">
+                <div class="sigma_category-content">
+                  <h6>Photography</h6>
+                  <span>569 Items</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--taxonomy End-->
+  </div>
+  <!--products Start-->
+  <div id="section-products">
+    <div class="section section-padding pt-0">
+      <div class="container">
+        <div class="section-title centered has-element">
+          <h3 class="title">Trending Products</h3>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <!-- Product Start -->
+            <div class="sigma_product style-7">
+              <div class="sigma_product-thumb">
+                <a href="{% url 'web:shop' %}">
+                  <img src="/static/web/img/home-1/500x420-3.jpg" alt="product">
+                </a>
+              </div>
+              <div class="sigma_product-body">
+                <div class="sigma_rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <h5 class="sigma_product-title"> <a href="{% url 'web:shop' %}">Psychology of Money</a> </h5>
+                <p>The beautiful words written by Andros build connections as the story progresses.</p>
+                <div class="sigma_product-footer">
+                  <div class="sigma_product-price">
+                    <span>29$</span>
+                    <span>49$</span>
+                  </div>
+                  <a href="#" class="sigma_btn btn-sm">Add to Cart</a>
+                </div>
+              </div>
+            </div>
+            <!-- Product End -->
+            <!-- Product Start -->
+            <div class="sigma_product style-7">
+              <div class="sigma_product-thumb">
+                <a href="{% url 'web:shop' %}">
+                  <img src="/static/web/img/home-1/500x420-4.jpg" alt="product">
+                </a>
+              </div>
+              <div class="sigma_product-body">
+                <div class="sigma_rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <h5 class="sigma_product-title"> <a href="{% url 'web:shop' %}">Matt Ridley</a> </h5>
+                <p>The beautiful words written by Andros build connections as the story progresses.</p>
+                <div class="sigma_product-footer">
+                  <div class="sigma_product-price">
+                    <span>45$</span>
+                    <span>65$</span>
+                  </div>
+                  <a href="#" class="sigma_btn btn-sm">Add to Cart</a>
+                </div>
+              </div>
+            </div>
+            <!-- Product End -->
+          </div>
+          <div class="col-lg-6">
+            <!-- Product Start -->
+            <div class="sigma_product style-7">
+              <div class="sigma_product-thumb">
+                <a href="{% url 'web:shop' %}">
+                  <img src="/static/web/img/home-1/500x420-5.jpg" alt="product">
+                </a>
+              </div>
+              <div class="sigma_product-body">
+                <div class="sigma_rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <h5 class="sigma_product-title"> <a href="{% url 'web:shop' %}">Company of One</a> </h5>
+                <p>The beautiful words written by Andros build connections as the story progresses.</p>
+                <div class="sigma_product-footer">
+                  <div class="sigma_product-price">
+                    <span>29$</span>
+                    <span>39$</span>
+                  </div>
+                  <a href="#" class="sigma_btn btn-sm">Add to Cart</a>
+                </div>
+              </div>
+            </div>
+            <!-- Product End -->
+            <!-- Product Start -->
+            <div class="sigma_product style-7">
+              <div class="sigma_product-thumb">
+                <a href="{% url 'web:shop' %}">
+                  <img src="/static/web/img/home-1/500x420-6.jpg" alt="product">
+                </a>
+              </div>
+              <div class="sigma_product-body">
+                <div class="sigma_rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <h5 class="sigma_product-title"> <a href="{% url 'web:shop' %}">Puume Doran Gray</a> </h5>
+                <p>The beautiful words written by Andros build connections as the story progresses.</p>
+                <div class="sigma_product-footer">
+                  <div class="sigma_product-price">
+                    <span>29$</span>
+                    <span>49$</span>
+                  </div>
+                  <a href="#" class="sigma_btn btn-sm">Add to Cart</a>
+                </div>
+              </div>
+            </div>
+            <!-- Product End -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--products End-->
+  </div>
+  <!--products Start-->
+  <div id="section-products">
+    <div class="section section-padding pt-0">
+      <div class="container">
+        <div class="section-title centered has-element">
+          <h3 class="title">New Arrivals</h3>
+        </div>
+        <div class="row">
+          <!-- Product Start -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="sigma_product style-5">
+              <div class="sigma_product-thumb">
+                <img src="/static/web/img/home-2/500-2.jpg" alt="product">
+                <a href="#" data-toggle="modal" data-target="#quickViewModal">Quick View</a>
+              </div>
+              <div class="sigma_product-body">
+                <h5 class="sigma_product-title"> <a href="{% url 'web:shop' %}">101 Essays of 2023</a> </h5>
+                <div class="sigma_product-price">
+                  <span>29$</span>
+                  <span>49$</span>
+                </div>
+                <div class="sigma_rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p>The beautiful words written by Andros build connections as the story progresses.</p>
+              </div>
+              <div class="sigma_product-footer">
+                <a href="#" class="sigma_btn btn-sm light" data-toggle="tooltip" title="Wishlist"> <i
+                    class="m-0 far fa-heart"></i>
+                </a>
+                <a href="#" class="sigma_btn btn-sm">Add to Cart</a>
+                <a href="#" class="sigma_btn btn-sm light" data-toggle="tooltip" title="Compare"> <i
+                    class="m-0 far fa-signal-4"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Product End -->
+          <!-- Product Start -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="sigma_product style-5">
+              <div class="sigma_product-thumb">
+                <img src="/static/web/img/home-2/500-3.jpg" alt="product">
+                <a href="#" data-toggle="modal" data-target="#quickViewModal">Quick View</a>
+              </div>
+              <div class="sigma_product-body">
+                <h5 class="sigma_product-title"> <a href="{% url 'web:shop' %}">Joust Duffle</a> </h5>
+                <div class="sigma_product-price">
+                  <span>29$</span>
+                  <span>49$</span>
+                </div>
+                <div class="sigma_rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p>The beautiful words written by Andros build connections as the story progresses.</p>
+              </div>
+              <div class="sigma_product-footer">
+                <a href="#" class="sigma_btn btn-sm light" data-toggle="tooltip" title="Wishlist"> <i
+                    class="m-0 far fa-heart"></i>
+                </a>
+                <a href="#" class="sigma_btn btn-sm">Add to Cart</a>
+                <a href="#" class="sigma_btn btn-sm light" data-toggle="tooltip" title="Compare"> <i
+                    class="m-0 far fa-signal-4"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Product End -->
+          <!-- Product Start -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="sigma_product style-5">
+              <div class="sigma_product-thumb">
+                <img src="/static/web/img/home-2/500-4.jpg" alt="product">
+                <a href="#" data-toggle="modal" data-target="#quickViewModal">Quick View</a>
+              </div>
+              <div class="sigma_product-body">
+                <h5 class="sigma_product-title"> <a href="{% url 'web:shop' %}">The Cereal</a> </h5>
+                <div class="sigma_product-price">
+                  <span>20$</span>
+                  <span>40$</span>
+                </div>
+                <div class="sigma_rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p>The beautiful words written by Andros build connections as the story progresses.</p>
+              </div>
+              <div class="sigma_product-footer">
+                <a href="#" class="sigma_btn btn-sm light" data-toggle="tooltip" title="Wishlist"> <i
+                    class="m-0 far fa-heart"></i>
+                </a>
+                <a href="#" class="sigma_btn btn-sm">Add to Cart</a>
+                <a href="#" class="sigma_btn btn-sm light" data-toggle="tooltip" title="Compare"> <i
+                    class="m-0 far fa-signal-4"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Product End -->
+          <!-- Product Start -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="sigma_product style-5">
+              <div class="sigma_product-thumb">
+                <img src="/static/web/img/home-2/500-5.jpg" alt="product">
+                <a href="#" data-toggle="modal" data-target="#quickViewModal">Quick View</a>
+              </div>
+              <div class="sigma_product-body">
+                <h5 class="sigma_product-title"> <a href="{% url 'web:shop' %}">All The alless</a> </h5>
+                <div class="sigma_product-price">
+                  <span>29$</span>
+                  <span>49$</span>
+                </div>
+                <div class="sigma_rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p>The beautiful words written by Andros build connections as the story progresses.</p>
+              </div>
+              <div class="sigma_product-footer">
+                <a href="#" class="sigma_btn btn-sm light" data-toggle="tooltip" title="Wishlist"> <i
+                    class="m-0 far fa-heart"></i>
+                </a>
+                <a href="#" class="sigma_btn btn-sm">Add to Cart</a>
+                <a href="#" class="sigma_btn btn-sm light" data-toggle="tooltip" title="Compare"> <i
+                    class="m-0 far fa-signal-4"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Product End -->
+        </div>
+      </div>
+    </div>
+    <!--products End-->
+  </div>
+  <!--products Start-->
+  <div id="section-products2">
+    <div class="section section-padding pt-0">
+      <div class="container">
+        <div class="section-title centered has-element">
+          <h3 class="title">Best Sellers</h3>
+        </div>
+        <div class="row">
+          <!-- Product Start -->
+          <div class="col-md-4 col-sm-6">
+            <div class="sigma_product style-2">
+              <div class="sigma_product-thumb">
+                <a href="{% url 'web:shop' %}">
+                  <img src="/static/web/img/shop/500-5.jpg" alt="product">
+                </a>
+                <div class="sigma_product-controls">
+                  <a href="#" data-toggle="tooltip" title="Wishlist"> <i class="far fa-heart"></i>
+                  </a>
+                  <a href="{% url 'web:shop' %}" data-toggle="tooltip" title="Add To Cart"> <i
+                      class="far fa-shopping-basket"></i>
+                  </a>
+                  <a href="#" data-toggle="tooltip" title="Quick View"> <i data-toggle="modal"
+                      data-target="#quickViewModal" class="far fa-eye"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="sigma_product-body">
+                <h5 class="sigma_product-title"> <a href="{% url 'web:shop' %}">Zero To One</a> </h5>
+                <div class="sigma_product-price">
+                  <span>29$</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Product End -->
+          <!-- Product Start -->
+          <div class="col-md-4 col-sm-6">
+            <div class="sigma_product style-2">
+              <div class="sigma_product-thumb">
+                <a href="{% url 'web:shop' %}">
+                  <img src="/static/web/img/shop/500-6.jpg" alt="product">
+                </a>
+                <div class="sigma_product-controls">
+                  <a href="#" data-toggle="tooltip" title="Wishlist"> <i class="far fa-heart"></i>
+                  </a>
+                  <a href="{% url 'web:shop' %}" data-toggle="tooltip" title="Add To Cart"> <i
+                      class="far fa-shopping-basket"></i>
+                  </a>
+                  <a href="#" data-toggle="tooltip" title="Quick View"> <i data-toggle="modal"
+                      data-target="#quickViewModal" class="far fa-eye"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="sigma_product-body">
+                <h5 class="sigma_product-title"> <a href="{% url 'web:shop' %}"> The Happy</a> </h5>
+                <div class="sigma_product-price">
+                  <span>59$</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Product End -->
+          <!-- Product Start -->
+          <div class="col-md-4 col-sm-6">
+            <div class="sigma_product style-2">
+              <div class="sigma_product-thumb">
+                <a href="{% url 'web:shop' %}">
+                  <img src="/static/web/img/shop/500-7.jpg" alt="product">
+                </a>
+                <div class="sigma_product-controls">
+                  <a href="#" data-toggle="tooltip" title="Wishlist"> <i class="far fa-heart"></i>
+                  </a>
+                  <a href="{% url 'web:shop' %}" data-toggle="tooltip" title="Add To Cart"> <i
+                      class="far fa-shopping-basket"></i>
+                  </a>
+                  <a href="#" data-toggle="tooltip" title="Quick View"> <i data-toggle="modal"
+                      data-target="#quickViewModal" class="far fa-eye"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="sigma_product-body">
+                <h5 class="sigma_product-title"> <a href="{% url 'web:shop' %}">Soul Of River</a> </h5>
+                <div class="sigma_product-price">
+                  <span>29$</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Product End -->
+        </div>
+      </div>
+    </div>
+    <!--products End-->
+  </div>
+  <!--team Start-->
+  <div id="section-team">
+    <div class="section section-padding pt-0">
+      <div class="container">
+        <div class="section-title centered has-element">
+          <h3 class="title">Featured Author</h3>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="sigma_team style-9">
+              <div class="sigma_team-thumb">
+
+                <img src="/static/web/img/about-us/350x400-2.jpg" alt="team">
+
+                <div class="sigma_team-body">
+                  <div class="sigma_team-title">
+                    <h5>
+                      <a href="#">Nicolas Sumpir</a>
+                    </h5>
+                    <div class="sigma_team-categories">
+                      <a href="#" class="sigma_team-category">2 Published Book</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="sigma_team style-9">
+              <div class="sigma_team-thumb">
+
+                <img src="/static/web/img/about-us/350x400-3.jpg" alt="team">
+
+                <div class="sigma_team-body">
+                  <div class="sigma_team-title">
+                    <h5>
+                      <a href="#">Nicolas Sumpir</a>
+                    </h5>
+                    <div class="sigma_team-categories">
+                      <a href="#" class="sigma_team-category">50 Published Book</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="sigma_team style-9">
+              <div class="sigma_team-thumb">
+
+                <img src="/static/web/img/about-us/350x400-4.jpg" alt="team">
+
+                <div class="sigma_team-body">
+                  <div class="sigma_team-title">
+                    <h5>
+                      <a href="#">Tim Abell</a>
+                    </h5>
+                    <div class="sigma_team-categories">
+                      <a href="#" class="sigma_team-category">9 Published Book</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--team End-->
+  </div>
+  <!--cta Start-->
+  <div id="section-cta">
+    <div class="section pt-0">
+      <div class="container">
+        <div class="section-title centered">
+          <h3 class="title"><span class="primary-color"></span>Get a Free Chapter of This Book
+          </h3>
+        </div>
+        <div class="sigma_cta">
+          <form method="post">
+            <div class="row justify-content-center">
+              <div class="col-md-4">
+                <input type="email" name="email" placeholder="Enter your email">
+              </div>
+              <div class="col-md-2">
+                <button type="button" class="btn-block mt-4 mt-md-0">Get Free</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--cta End-->
+  </div>
+  <!--testimonial Start-->
+  <div id="section-testimonial">
+    <div class="section section-padding bg-cover bg-center light-overlay"
+      style="background-image: url(/static/web/img/home-2/1920x800-3.jpg)">
+      <div class="container">
+        <div class="section-title centered has-element">
+          <h3 class="title">Client's Say</h3>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="sigma_testimonial style-11">
+              <div class="sigma_testimonial-body">
+                <div class="d-flex align-items-center">
+                  <div class="sigma_testimonial-thumb">
+                    <img src="/static/web/img/home-2/70x70-1.jpg" alt="testimonial">
+                  </div>
+                  <div class="sigma_author-block">
+                    <h5>
+                      George Clint
+                    </h5>
+                    <span class="sigma_testimonial-category">Manager</span>
+                  </div>
+                </div>
+                <div class="d-block d-sm-flex mt-4">
+                  <span class="fas fa-quote-left sigma_testimonial-icon"></span>
+                  <p class="mt-sm-0 mb-0 mt-3">Sample TextEcstatic advanced and procured civility not put . Overcame
+                    breeding or my concerns desirous so absolute. –
+                    Mark Hoppus"</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="sigma_testimonial style-11">
+              <div class="sigma_testimonial-body">
+                <div class="d-flex align-items-center">
+                  <div class="sigma_testimonial-thumb">
+                    <img src="/static/web/img/home-2/70x70-2.jpg" alt="testimonial">
+                  </div>
+                  <div class="sigma_author-block">
+                    <h5>
+                      John Doe
+                    </h5>
+                    <span class="sigma_testimonial-category">Manager</span>
+                  </div>
+                </div>
+                <div class="d-block d-sm-flex mt-4">
+                  <span class="fas fa-quote-left sigma_testimonial-icon"></span>
+                  <p class="mt-sm-0 mb-0 mt-3">Sample TextEcstatic advanced and procured civility not put . Overcame
+                    breeding or my concerns desirous so absolute. –
+                    Mark Hoppus"</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--testimonial End-->
+  </div>
+  <!--blog Start-->
+  <div id="section-blog">
+    <div class="section section-padding">
+      <div class="container">
+        <div class="section-title centered has-element">
+          <h3 class="title">Latest Blog</h3>
+        </div>
+        <div class="row pt-0 pt-lg-5 ">
+          <div class="col-lg-4 col-md-6">
+            <article class="sigma_post style-13">
+              <a href="{% url 'web:shop' %}" class="sigma_post-date">
+                <span>24</span>
+                Jun
+              </a>
+              <div class="sigma_post-thumb">
+                <a href="{% url 'web:shop' %}" class="d-block">
+                  <img src="/static/web/img/home-2/350x300-2.jpg" alt="img">
+                </a>
+              </div>
+              <div class="sigma_post-body">
+                <div class="sigma_post-meta">
+                  <ul>
+                    <li>
+                      <a href="#">By <b>Admin</b></a>
+                    </li>
+                    <li>
+                      <a href="#">Booksly</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="sigma_post-content">
+                  <h5>
+                    <a href="{% url 'web:shop' %}">Meet & Great New Book</a>
+                  </h5>
+                  <p class="m-0">Mauris ipsum aliquam libero, non adipiscing dolor urna a orci.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <article class="sigma_post style-13">
+              <a href="{% url 'web:shop' %}" class="sigma_post-date">
+                <span>22</span>
+                Apr
+              </a>
+              <div class="sigma_post-thumb">
+                <a href="{% url 'web:shop' %}" class="d-block">
+                  <img src="/static/web/img/home-2/350x300-3.jpg" alt="img">
+                </a>
+              </div>
+              <div class="sigma_post-body">
+                <div class="sigma_post-meta">
+                  <ul>
+                    <li>
+                      <a href="#">By <b>Admin</b></a>
+                    </li>
+                    <li>
+                      <a href="#">Booksly</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="sigma_post-content">
+                  <h5>
+                    <a href="{% url 'web:shop' %}">Reading Space</a>
+                  </h5>
+                  <p class="m-0"> Mauris ipsum aliquam libero, non adipiscing dolor urna a orci.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <article class="sigma_post style-13">
+              <a href="{% url 'web:shop' %}" class="sigma_post-date">
+                <span>12</span>
+                Jan
+              </a>
+              <div class="sigma_post-thumb">
+                <a href="{% url 'web:shop' %}" class="d-block">
+                  <img src="/static/web/img/home-2/350x300-4.jpg" alt="img">
+                </a>
+              </div>
+              <div class="sigma_post-body">
+                <div class="sigma_post-meta">
+                  <ul>
+                    <li>
+                      <a href="#">By <b>Admin</b></a>
+                    </li>
+                    <li>
+                      <a href="#">Booksly</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="sigma_post-content">
+                  <h5>
+                    <a href="{% url 'web:shop' %}">Tunnel Books</a>
+                  </h5>
+                  <p class="m-0"> Mauris ipsum aliquam libero, non adipiscing dolor urna a orci.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--blog End-->
+  </div>
+  <!--quickview Start-->
+  <div id="section-quickview">
+    <div class="modal fade sigma_quick-view-modal" id="quickViewModal" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="sigma_close" data-dismiss="modal">
+              <span></span>
+              <span></span>
+            </div>
+            <div class="row sigma_product-single">
+              <div class="col-md-6">
+                <div class="sigma_product-single-thumb">
+                  <img src="/static/web/img/home-1/600-1.jpg" alt="product">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="sigma_product-single-content">
+                  <div class="sigma_product-price">
+                    <span>352$</span>
+                    <span>245$</span>
+                  </div>
+                  <div class="sigma_rating-wrapper">
+                    <div class="sigma_rating">
+                      <i class="fas fa-star active"></i>
+                      <i class="fas fa-star active"></i>
+                      <i class="fas fa-star active"></i>
+                      <i class="fas fa-star active"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <span>255 Reviews</span>
+                  </div>
+                  <hr>
+                  <p class="sigma_product-excerpt">
+                    Donec sollicitudin molestie malesuada. Nulla porttitor accumsan tincidunt. Vestibulum ante ipsum
+                    primis in faucibus orci luctus et ultrices posuere cubilia Curae Donec velit neque,
+                  </p>
+                  <div class="sigma_product-meta">
+                    <p><strong>Product SKU: <span>#3382dk</span></strong>
+                    </p>
+                    <p><strong>Availablity: <span>In Stock</span></strong>
+                    </p>
+                    <p><strong>Tags: </strong> <a href="#">Fashion</a> <a href="#">Classic</a>
+                    </p>
+                  </div>
+                  <hr>
+                  <form class="sigma_product-atc-form">
+                    <div class="sigma_product-buttons d-block">
+                      <a href="{% url 'web:shop' %}" class="ml-0 btn-block sigma_btn">Buy Now <i
+                          class="far fa-shopping-basket"></i> </a>
+                      <a href="{% url 'web:shop' %}" class="ml-0 btn-block sigma_btn light">Wishlist <i
+                          class="far fa-heart"></i> </a>
+                      <a href="{% url 'web:shop' %}" class="ml-0 btn-block sigma_btn light">Compare <i
+                          class="far fa-compress"></i> </a>
+                    </div>
+                  </form>
+                  <!-- Post Meta Start -->
+                  <div class="sigma_post-single-meta">
+                    <div class="sigma_post-single-meta-item sigma_post-share">
+                      <h5>Share</h5>
+                      <ul class="sigma_sm">
+                        <li>
+                          <a href="#">
+                            <i class="fab fa-facebook-f"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <i class="fab fa-linkedin-in"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <i class="fab fa-twitter"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <i class="fab fa-youtube"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- Post Meta End -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--quickview End-->
+  </div>
+  <!--to-top Start-->
+  <div id="section-to-top">
+    <div class="sigma_top style-3">
+      <i class="far fa-arrow-up"></i>
+    </div>
+    <!--to-top End-->
+  </div>
+  
+  </div>
+
+
+</body>
+
+</html>
+
+{% endblock %}

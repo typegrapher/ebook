@@ -1,0 +1,644 @@
+{% extends 'web/base.html' %} {% load static %} {% block content %}
+
+
+
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+
+
+</head>
+
+<body class="btn-style-4 btn-square sidebar-style-4">
+  <!--header Start-->
+
+  <!--subheader Start-->
+  <div id="section-subheader">
+    <div class="sigma_subheader style-11 bg-cover bg-center dark-overlay"
+      style="background-image: url(/static/web/img/shop/1920x800-0.jpg)">
+      <div class="container d-block d-lg-flex align-items-center justify-content-between">
+        <div class="sigma_subheader-inner">
+          <h1 class="mb-4 mb-lg-0">Shop</h1>
+        </div>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a class="btn-link" href="#">Home</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">Shop</li>
+        </ol>
+      </div>
+    </div>
+    <!--subheader End-->
+  </div>
+
+  <!--shop Start-->
+  <div id="section-shop">
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <section class="container container_prodexct col-lg-8">
+            <div class="sigma_shop-global">
+              <p>Showing <b>20</b> of <b>320</b> products</p>
+
+              <select type="search" class="select-table-filter" data-table="order-table">
+                <option value="">language</option>
+                <option value="arabic">Arabic</option>
+                <option value="english">English</option>
+                <option value="malayalam">Malayalam</option>
+              </select>
+
+            </div>
+
+
+
+
+
+
+
+
+            <table class="order-table">
+              <tbody class="tbody_classname row">
+                {% for product in product %}
+                <tr class="col-md-4 col-sm-6">
+                  <td data-price="29">
+                    <div>
+                      <div class="sigma_product style-2">
+                        <div class="sigma_product-thumb">
+                          <a href="">
+                            <img src="{{product.image.url}}" alt="{{product.name}}">
+                          </a>
+                          <div class="sigma_product-controls">
+                            <a href="#" data-toggle="tooltip" title="Wishlist"><i class="far fa-heart"></i></a>
+                            <a href="#" data-toggle="tooltip" title="Add To Cart"><i class="far fa-shopping-basket"></i></a>
+                            <a href="#" data-toggle="tooltip" title="Quick View"><i data-toggle="modal"
+                                data-target="#quickViewModal" class="far fa-eye"></i></a>
+                          </div>
+                        </div>
+                        <div class="sigma_product-body">
+                          <h5 class="sigma_product-title">
+                            
+                            <a href="{% url 'web:single_page' product.id %}">{{ product.name }}</a>
+
+                          </h5>
+                          <div class="lang_author">
+                            <p>{{product.language}}</p>
+                            <p>{{product.author}}</p>
+                          </div>
+                          <div class="sigma_product-price">
+                            <span><span>$</span>{{product.price}}</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                {% endfor %}
+
+                <!-- More product rows here -->
+
+
+
+                {% comment %} <tr class="col-md-4 col-sm-6">
+                  <td data-price="29">
+                    <div>
+                      <div class="sigma_product style-2">
+                        <div class="sigma_product-thumb">
+                          <a href="{% url 'web:single_page' %}">
+                            <img src="/static/web/img/shop/500-5.jpg" alt="product">
+                          </a>
+                          <div class="sigma_product-controls">
+                            <a href="#" data-toggle="tooltip" title="Wishlist"><i class="far fa-heart"></i></a>
+                            <a href="{% url 'web:single_page' %}" data-toggle="tooltip" title="Add To Cart"><i
+                                class="far fa-shopping-basket"></i></a>
+                            <a href="#" data-toggle="tooltip" title="Quick View"><i data-toggle="modal"
+                                data-target="#quickViewModal" class="far fa-eye"></i></a>
+                          </div>
+                        </div>
+                        <div class="sigma_product-body">
+                          <h5 class="sigma_product-title"><a href="{% url 'web:single_page' %}">Zero To One</a></h5>
+                          <div class="lang_author">
+                            <p>english</p>
+                            <p>sre.narayanan</p>
+                          </div>
+                          <div class="sigma_product-price">
+                            <span>29$</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr class="col-md-4 col-sm-6">
+                  <td data-price="29">
+                    <div>
+                      <div class="sigma_product style-2">
+                        <div class="sigma_product-thumb">
+                          <a href="{% url 'web:single_page' %}">
+                            <img src="/static/web/img/shop/500-5.jpg" alt="product">
+                          </a>
+                          <div class="sigma_product-controls">
+                            <a href="#" data-toggle="tooltip" title="Wishlist"><i class="far fa-heart"></i></a>
+                            <a href="{% url 'web:single_page' %}" data-toggle="tooltip" title="Add To Cart"><i
+                                class="far fa-shopping-basket"></i></a>
+                            <a href="#" data-toggle="tooltip" title="Quick View"><i data-toggle="modal"
+                                data-target="#quickViewModal" class="far fa-eye"></i></a>
+                          </div>
+                        </div>
+                        <div class="sigma_product-body">
+                          <h5 class="sigma_product-title"><a href="{% url 'web:single_page' %}">Zero To One</a></h5>
+                          <div class="lang_author">
+                            <p>english</p>
+                            <p>sre.narayanan</p>
+                          </div>
+                          <div class="sigma_product-price">
+                            <span>29$</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr> {% endcomment %}
+              </tbody>
+            </table>
+
+          </section>
+
+
+
+          <!-- Sidebar Start -->
+          <div class="col-lg-4">
+            <div class="sidebar">
+              <!-- Search Widget -->
+              <div class="widget widget-search">
+                <h5 class="widget-title">Search</h5>
+                <div class="input-group">
+                  <input type="search" class="light-table-filter search-bar" data-table="order-table" name="search"
+                    placeholder="Search">
+                  <div class="input-group-append">
+                    <button type="button">
+                      <i class="fal fa-search mr-0"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- Filter: Price Start -->
+              <div class="widget">
+                <h5 class="widget-title">Price</h5>
+                <div class="wrapper">
+                  <div class="price-input">
+                    <div class="field">
+                      <span>Min</span>
+                      <input type="number" id="minInput" class="input-min" value="0">
+                    </div>
+                    <div class="separator">-</div>
+                    <div class="field">
+                      <span>Max</span>
+                      <input type="number" id="maxInput" class="input-max" value="100">
+                    </div>
+                  </div>
+                  <div class="slider">
+                    
+                  </div>
+                  <div class="range-input">
+                    <input type="range" class="range-min" min="0" max="500" value="25" step="100">
+                    <input type="range" class="range-max" min="0" max="500" value="75" step="100">
+                </div>
+                </div>
+              </div>
+              <!-- Filter: Price End -->
+
+              <!-- Filter: Price End -->
+              <style>
+                /* Import Google Font - Poppins */
+                @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+                ::selection {
+                  color: #fff;
+                  background: #17a2b8;
+                }
+
+                .wrapper {
+                  width: 400px;
+                }
+
+                header h2 {
+                  font-size: 24px;
+                  font-weight: 600;
+                }
+
+                header p {
+                  margin-top: 5px;
+                  font-size: 16px;
+                }
+
+                .price-input {
+                  width: 100%;
+                  display: flex;
+                  margin: 30px 0 35px;
+                }
+
+                .price-input .field {
+                  display: flex;
+                  width: 100%;
+                  height: 45px;
+                  align-items: center;
+                }
+
+                .field input {
+                  width: 100%;
+                  height: 100%;
+                  outline: none;
+                  font-size: 19px;
+                  margin-left: 12px;
+                  border-radius: 5px;
+                  text-align: center;
+                  border: 1px solid #999;
+                  -moz-appearance: textfield;
+                }
+
+                input[type="number"]::-webkit-outer-spin-button,
+                input[type="number"]::-webkit-inner-spin-button {
+                  -webkit-appearance: none;
+                }
+
+                .price-input .separator {
+                  width: 130px;
+                  display: flex;
+                  font-size: 19px;
+                  align-items: center;
+                  justify-content: center;
+                }
+
+                .slider {
+                  height: 5px;
+                  position: relative;
+                  background: #ddd;
+                  border-radius: 5px;
+                }
+
+                .slider .progress {
+                  height: 100%;
+                  left: 25%;
+                  right: 25%;
+                  position: absolute;
+                  border-radius: 5px;
+                  background: #17a2b8;
+                }
+
+                .range-input {
+                  position: relative;
+                }
+
+                .range-input input {
+                  position: absolute;
+                  width: 100%;
+                  height: 5px;
+                  top: -5px;
+                  background: none;
+                  pointer-events: none;
+                  -webkit-appearance: none;
+                  -moz-appearance: none;
+                }
+
+                input[type="range"]::-webkit-slider-thumb {
+                  height: 17px;
+                  width: 17px;
+                  border-radius: 50%;
+                  background: #17a2b8;
+                  pointer-events: auto;
+                  -webkit-appearance: none;
+                  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+                }
+
+                input[type="range"]::-moz-range-thumb {
+                  height: 17px;
+                  width: 17px;
+                  border: none;
+                  border-radius: 50%;
+                  background: #17a2b8;
+                  pointer-events: auto;
+                  -moz-appearance: none;
+                  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+                }
+
+                /* Support */
+                .support-box {
+                  top: 2rem;
+                  position: relative;
+                  bottom: 0;
+                  text-align: center;
+                  display: block;
+                }
+
+                .b-btn {
+                  color: white;
+                  text-decoration: none;
+                  font-weight: bold;
+                }
+
+                .b-btn.paypal i {
+                  color: blue;
+                }
+
+                .b-btn:hover {
+                  text-decoration: none;
+                  font-weight: bold;
+                }
+
+                .b-btn i {
+                  font-size: 20px;
+                  color: yellow;
+                  margin-top: 2rem;
+                }
+              </style>
+
+              <script>
+                const productRows = document.querySelectorAll('.tbody_classname.row tr');
+        const minInput = document.getElementById('minInput');
+        const maxInput = document.getElementById('maxInput');
+        const rangeMinInput = document.querySelector('.range-min');
+        const rangeMaxInput = document.querySelector('.range-max');
+
+        // Add event listeners to the filter inputs
+        minInput.addEventListener('input', filterProducts);
+        maxInput.addEventListener('input', filterProducts);
+        rangeMinInput.addEventListener('input', updateRangeValues);
+        rangeMaxInput.addEventListener('input', updateRangeValues);
+
+        function filterProducts() {
+            const minPrice = parseInt(minInput.value);
+            const maxPrice = parseInt(maxInput.value);
+
+            productRows.forEach(row => {
+                const price = parseInt(row.querySelector('td').dataset.price);
+                if (price >= minPrice && price <= maxPrice) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        }
+
+        function updateRangeValues() {
+            minInput.value = rangeMinInput.value;
+            maxInput.value = rangeMaxInput.value;
+            filterProducts();
+        }
+              </script>
+              <!-- Category Widget -->
+              <div class="widget widget-categories">
+                <h5 class="widget-title">Categories</h5>
+                <ul>
+                  <li>
+                    <a href="#">
+                      Money Books
+                      <span>12</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      Children's Books
+                      <span>9</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      Travel Books
+                      <span>7</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      Photography
+                      <span>5</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      Psychology of Money
+                      <span>3</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <style>
+                .container_prodexct td,
+                th,
+                table,
+                tbody {
+                  border: none !important;
+                }
+
+                .container_prodexct {
+                  overflow: hidden;
+
+                  margin: 0 auto;
+                }
+
+                .container_prodexct table {
+                  width: 100%;
+                }
+
+                .container_prodexct td,
+                .container_prodexct th {
+                  padding: 0px;
+                }
+
+                .container_prodexct td:first-child,
+                .container_prodexct th:first-child {
+                  padding-left: 0px;
+                }
+
+                .container_prodexct td:last-child,
+                .container_prodexct th:last-child {
+                  padding-right: 0px;
+                }
+
+                .container_prodexctzz th {
+                  border-bottom: 1px solid #ddd;
+                  position: relative;
+                }
+
+                .sidebar {
+                  margin-top: 45px;
+                }
+
+                .select-table-filter {
+                  width: 220px;
+                }
+
+                .select-table-filter option {
+                  padding: 20px 0 20px 0;
+                }
+
+                .lang_author {
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: space-between;
+                }
+              </style>
+              <!-- Recent Posts Widget -->
+              <div class="widget widget-sigma-recent-posts">
+                <h5 class="widget-title">Most Commented</h5>
+                <div class="sigma_recent-post">
+                  <a href="blog-details.html" class="recent-post-image">
+                    <img src="/static/web/img/shop/80x80-1.jpg" alt="img">
+                    <span>12</span>
+                  </a>
+                  <div class="recent-post-descr">
+                    <h6>
+                      <a href="blog-details.html">Puume Doran Gray.</a>
+                    </h6>
+                    <a href="blog-details.html" class="date">
+                      <i class="far fa-clock mr-2"></i>
+                      June 4, 2023
+                    </a>
+                  </div>
+                </div>
+                <div class="sigma_recent-post">
+                  <a href="blog-details.html" class="recent-post-image">
+                    <img src="/static/web/img/shop/80x80-2.jpg" alt="img">
+                    <span>6</span>
+                  </a>
+                  <div class="recent-post-descr">
+                    <h6>
+                      <a href="blog-details.html">Psychology of Money</a>
+                    </h6>
+                    <a href="blog-details.html" class="date">
+                      <i class="far fa-clock mr-2"></i>
+                      June 4, 2023
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Subscribe Widget -->
+              <div class="widget widget-newsletter">
+                <h5 class="widget-title">Join Newsletter</h5>
+                <form method="post">
+                  <input type="email" name="email" placeholder="Enter your email">
+                  <button type="button" class="btn-block mt-4">Subscribe</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- Sidebar End -->
+        </div>
+      </div>
+    </div>
+    <!--shop End-->
+  </div>
+  <!--to-top Start-->
+  <div id="section-to-top">
+    <div class="sigma_top style-3">
+      <i class="far fa-arrow-up"></i>
+    </div>
+    <!--to-top End-->
+  </div>
+  <!--quickview Start-->
+  <div id="section-quickview">
+    <div class="modal fade sigma_quick-view-modal" id="quickViewModal" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="sigma_close" data-dismiss="modal">
+              <span></span>
+              <span></span>
+            </div>
+            <div class="row sigma_product-single">
+              <div class="col-md-6">
+                <div class="sigma_product-single-thumb">
+                  <img src="/static/web/img/shop/600-0.jpg" alt="product">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="sigma_product-single-content">
+                  <div class="sigma_product-price">
+                    <span>352$</span>
+                    <span>245$</span>
+                  </div>
+                  <div class="sigma_rating-wrapper">
+                    <div class="sigma_rating">
+                      <i class="fas fa-star active"></i>
+                      <i class="fas fa-star active"></i>
+                      <i class="fas fa-star active"></i>
+                      <i class="fas fa-star active"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <span>255 Reviews</span>
+                  </div>
+                  <hr>
+                  <p class="sigma_product-excerpt">
+                    Donec sollicitudin molestie malesuada. Nulla porttitor accumsan tincidunt.
+                    Vestibulum ante ipsum
+                    primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit
+                    neque,
+                  </p>
+                  <div class="sigma_product-meta">
+                    <p><strong>Product SKU: <span>#3382dk</span></strong>
+                    </p>
+                    <p><strong>Availablity: <span>In Stock</span></strong>
+                    </p>
+                    <p><strong>Tags: </strong> <a href="#">Fashion</a>, <a href="#">Classic</a>
+                    </p>
+                  </div>
+                  <hr>
+                  <form class="sigma_product-atc-form">
+                    <div class="sigma_product-buttons d-block">
+                      <a href="{% url 'web:single_page' %}" class="ml-0 btn-block sigma_btn">Buy Now <i
+                          class="far fa-shopping-basket"></i> </a>
+                      <a href="{% url 'web:single_page' %}" class="ml-0 btn-block sigma_btn light">Wishlist <i
+                          class="far fa-heart"></i> </a>
+                      <a href="{% url 'web:single_page' %}" class="ml-0 btn-block sigma_btn light">Compare <i
+                          class="far fa-compress"></i> </a>
+                    </div>
+                  </form>
+                  <!-- Post Meta Start -->
+                  <div class="sigma_post-single-meta">
+                    <div class="sigma_post-single-meta-item sigma_post-share">
+                      <h5>Share</h5>
+                      <ul class="sigma_sm">
+                        <li>
+                          <a href="#">
+                            <i class="fab fa-facebook-f"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <i class="fab fa-linkedin-in"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <i class="fab fa-twitter"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <i class="fab fa-youtube"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- Post Meta End -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--quickview End-->
+  </div>
+  <!--footer Start-->
+
+
+
+</body>
+
+
+</html>
+
+{% endblock %}

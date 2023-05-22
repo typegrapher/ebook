@@ -1,0 +1,109 @@
+{% extends 'web/base.html' %} {% load static %} {% block content %}
+
+
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+
+
+</head>
+
+<body class="btn-style-4 btn-square sidebar-style-4">
+  <!--header Start-->
+
+  <!--subheader Start-->
+  <div id="section-subheader">
+    <div class="sigma_subheader style-11 bg-cover bg-center dark-overlay"
+      style="background-image: url(/static/web/img/login/1920x800-0.jpg)">
+      <div class="container d-block d-lg-flex align-items-center justify-content-between">
+        <div class="sigma_subheader-inner">
+          <h1 class="mb-4 mb-lg-0">Login</h1>
+        </div>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a class="btn-link" href="#">Home</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">Login</li>
+        </ol>
+      </div>
+    </div>
+    <!--subheader End-->
+  </div>
+  <!--login Start-->
+  <div id="section-login">
+    <div class="section">
+      <div class="container">
+        <div class="section-title centered">
+          <h3 class="title">Log in</h3>
+          <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
+            eu feugiat
+            nulla facilisis.</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="w-100 h-100 mb-lg-30">
+              <img src="/static/web/img/login/540x429.jpg" class="w-100 h-100 object-cover" alt="img">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="sigma_form has-shadow">
+              <form method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                  <i class="fal fa-envelope"></i>
+                  <input type="email" name="email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                  <i class="fal fa-eye password-toggle show-password"></i>
+                  <input type="password" name="password" placeholder="Password">
+                </div>
+                <div class="sigma_form-info form-group">
+                  <div class="d-flex align-items-center">
+                    <input type="checkbox" id="checkbox" name="checkbox">
+                    <label class="mb-0" for="checkbox">Remember Me</label>
+                  </div>
+                  <a href="#">Forgot password?</a>
+                </div>
+                <div class="form-group">
+                  <button type="submit" class="btn-block">Login</button>
+                  <button type="button" class="btn-block google">
+                    <i class="fab fa-google-plus-g ml-0 mr-2"></i>
+                    Continue With Google
+                  </button>
+                </div>
+                <p class="text-center mb-0">Don't Have an Account?
+                  <a href="signup.html">Sign Up</a>
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--login End-->
+  </div>
+
+
+
+
+  <!--to-top Start-->
+  <div id="section-to-top">
+    <div class="sigma_top style-3">
+      <i class="far fa-arrow-up"></i>
+    </div>
+    <!--to-top End-->
+  </div>
+  <!--footer Start-->
+  <div id="section-footer">
+
+    <!--footer End-->
+  </div>
+
+  <!-- Javascript -->
+
+</body>
+
+
+</html>
+{% endblock %}

@@ -1,0 +1,132 @@
+
+
+{% extends 'web/base.html' %} {% load static %} {% block content %}
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+ 
+
+</head>
+
+<body class="btn-style-4 btn-square sidebar-style-4">
+  <!--header Start-->
+  
+  <!--subheader Start-->
+  <div id="section-subheader">
+    <div class="sigma_subheader style-11 bg-cover bg-center dark-overlay"
+      style="background-image: url(/static/web/img/contact-us/1920x800-1.jpg)">
+      <div class="container d-block d-lg-flex align-items-center justify-content-between">
+        <div class="sigma_subheader-inner">
+          <h1 class="mb-4 mb-lg-0">Contact Us</h1>
+        </div>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a class="btn-link" href="#">Home</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+        </ol>
+      </div>
+    </div>
+    <!--subheader End-->
+  </div>
+
+  </div>
+  <!--contact-form Start-->
+  <div id="section-contact-form">
+    <div class="section section-padding sigma_contact-with-bg bg-cover bg-center dark-overlay"
+      style="background-image: url(/static/web/img/contact-us/1920x800-2.jpg)">
+      <img src="/static/web/img/contact-us/634x750.jpg" class="absolute-image" alt="img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5">
+            <div class="sigma_form has-shadow">
+              <div class="section-title">
+                <h3 class="title sm mb-2">Get in <span class="primary-color">Touch</span>
+                </h3>
+                <p>We Will Be Happy To Assist You</p>
+              </div>
+              <form class="mf_form_validate ajax_submit" action="https://themeely.com/demo/booksly//static/web/sendmail.php" method="post"
+                enctype="multipart/form-data">
+                <div class="form-group">
+                  <i class="fal fa-user"></i>
+                  <input type="text" name="name" placeholder="Full Name">
+                </div>
+                <div class="form-group">
+                  <i class="fal fa-envelope"></i>
+                  <input type="email" name="email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                  <textarea name="message" rows="5" placeholder="Leave Us a Message"></textarea>
+                </div>
+                <button type="submit" class="btn-block">Send</button>
+                <div class="server_response w-100">
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-lg-6 offset-lg-1 mt-5 mt-lg-0">
+            <div class="sigma_info style-20">
+              <div class="sigma_info-title">
+                <span class="sigma_info-icon">
+                  <i class="flaticon-secure-payment is_flaticon"></i>
+                </span>
+              </div>
+              <div class="sigma_info-description">
+                <h5 class="text-white">
+                  Secure Payment
+                </h5>
+                <p>Hendrerit in vulputate velit esse molestie consequat.</p>
+              </div>
+            </div>
+            <div class="sigma_info style-20">
+              <div class="sigma_info-title">
+                <span class="sigma_info-icon">
+                  <i class="flaticon-24-hours-1 is_flaticon"></i>
+                </span>
+              </div>
+              <div class="sigma_info-description">
+                <h5 class="text-white">
+                  24/7 Support
+                </h5>
+                <p>Hendrerit in vulputate velit esse molestie consequat.</p>
+              </div>
+            </div>
+            <div class="sigma_info style-20">
+              <div class="sigma_info-title">
+                <span class="sigma_info-icon">
+                  <i class="flaticon-team is_flaticon"></i>
+                </span>
+              </div>
+              <div class="sigma_info-description">
+                <h5 class="text-white">
+                  Expert Team
+                </h5>
+                <p>Hendrerit in vulputate velit esse molestie consequat.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--contact-form End-->
+  </div>
+  <!--to-top Start-->
+  <div id="section-to-top">
+    <div class="sigma_top style-3">
+      <i class="far fa-arrow-up"></i>
+    </div>
+    <!--to-top End-->
+  </div>
+  <!--footer Start-->
+  
+
+  <!-- Javascript -->
+  
+  <script src="/static/web/functions/mf_form.js" type="text/javascript"></script>
+</body>
+
+
+</html>
+
+{% endblock %}
