@@ -29,20 +29,24 @@ def single_page(request,id):
 
 
 
-def Login(request):
-    context = {}
+from django.contrib import messages
+from django.contrib.auth import authenticate, login
+from django.shortcuts import render, redirect
+
+def login_view(request):
     if request.method == "POST":
         email = request.POST.get('email')
         password = request.POST.get('password')
-        user = authenticate(request, email=email, password=password)
+        user = authenticate(request, username=email, password=password)
         if user is not None:
             login(request, user)
             return redirect('web:shop')
         else:
-            print('invalid details')
-            return redirect('web:shop')
+            messages.error(request, 'Invalid email or password.')
 
-    return render(request, 'web/login.html', context)
+    
+    return render(request, 'web/login.html')
+
 
 
 def signup(request):
@@ -56,18 +60,26 @@ def signup(request):
 
         if password != cpassword:
             print('Passwords do not match')
-            return redirect('web:signup_view')
+            context['error'] = 'Passwords do not match'
+            context['email'] = email  # Save the email in the context
+            return render(request, 'web/signup.html', context)
         else:
-            username = fname + lname
+            username = email
             if User.objects.filter(email=email).exists():
                 print('User already exists')
-                return redirect('web:login')
+                context['error'] = 'User already exists'
+                context['email'] = email  # Save the email in the context
+                return render(request, 'web/signup.html', context)
             else:
-                user = User.objects.create_user(email=email, password=password)
+                user = User.objects.create_user(username=username, password=password, email=email)
+                context['email'] = email  # Save the email in the context
                 return redirect('web:login')
 
     return render(request, 'web/signup.html', context)
 
+def logout_view(request):
+    logout(request)
+    return redirect('web:shop')
 
 
 def about(request):

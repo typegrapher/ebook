@@ -46,9 +46,19 @@
               <img src="/static/web/img/login/540x429.jpg" class="w-100 h-100 object-cover" alt="img">
             </div>
           </div>
+
           <div class="col-lg-6">
             <div class="sigma_form has-shadow">
-              <form method="post">
+              {% if messages %}
+              <div class="alert alert-danger">
+                <ul>
+                  {% for message in messages %}
+                  <li>{{ message }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+              {% endif %}
+              <form id="login-form" method="POST">
                 {% csrf_token %}
                 <div class="form-group">
                   <i class="fal fa-envelope"></i>
@@ -73,7 +83,7 @@
                   </button>
                 </div>
                 <p class="text-center mb-0">Don't Have an Account?
-                  <a href="signup.html">Sign Up</a>
+                  <a href="{% url 'web:signup_view' %}">Sign Up</a>
                 </p>
               </form>
             </div>
@@ -85,7 +95,16 @@
   </div>
 
 
-
+  <script>
+    // Prevent form submission if fields are empty
+    document.getElementById('login-form').addEventListener('submit', function (event) {
+      const emailInput = document.getElementsByName('email')[0];
+      const passwordInput = document.getElementsByName('password')[0];
+      if (emailInput.value.trim() === '' || passwordInput.value.trim() === '') {
+        event.preventDefault();
+      }
+    });
+  </script>
 
   <!--to-top Start-->
   <div id="section-to-top">

@@ -46,74 +46,75 @@
         <div class="row justify-content-center">
           <div class="col-md-8">
             <div class="sigma_form style-2">
-              <form method="post">
-              {% csrf_token %}
-                <div class="row">
-                  <div class="col-lg-6">
-                    <div class="form-group">
-                      <input type="text" name="fname" placeholder="First Name">
+              <form method="POST">
+    {% csrf_token %}
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="form-group">
+                <input type="text" name="fname" placeholder="First Name">
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="form-group">
+                <input type="text" name="lname" placeholder="Last Name">
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <button type="button">US</button>
                     </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="form-group">
-                      <input type="text" name="lname" placeholder="Last Name">
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="form-group">
-                      <div class="input-group">
-                        <div class="input-group-prepend">
-                          <button type="button">US</button>
-                        </div>
-                        <input type="number" name="phone" placeholder="+1">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="form-group">
-                      <input type="email" name="email" placeholder="Email">
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="form-group">
-                      <i class="fal fa-eye password-toggle show-password"></i>
-                      <input type="password" name="password" placeholder="Password">
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="form-group">
-                      <i class="fal fa-eye password-toggle show-password"></i>
-                      <input type="password" name="cpassword" placeholder="Confirm Password">
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <div class="d-flex align-items-center justify-content-center">
-                      <input type="checkbox" id="checkbox" name="checkbox" value="Remember Me">
-                      <label class="mb-0" for="checkbox">By Selecting This You Agree to the
-                        <a href="#">Privacy Policy</a>
-                        and
-                        <a href="#">Cookie Policy</a>
-                      </label>
-                    </div>
-                    <div class="text-center mt-3">
-                      <button type="submit">Signup</button>
-                    </div>
-                    <div class="sigma_form-seperator">
-                      <span>Or</span>
-                    </div>
-                    <div class="sigma_buttons text-center">
-                      <button type="button" class="facebook">
-                        <i class="fab fa-facebook-f ml-0 mr-2"></i>
-                        Facebook
-                      </button>
-                      <button type="button" class="google">
-                        <i class="fab fa-google ml-0 mr-2"></i>
-                        Google
-                      </button>
-                    </div>
-                  </div>
+                    <input type="number" name="phone" placeholder="+1">
                 </div>
-              </form>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="form-group">
+                <input type="email" name="email" value="{{ email }}" placeholder="Email">
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="form-group">
+                <i class="fal fa-eye password-toggle show-password"></i>
+                <input type="password" name="password" placeholder="Password">
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="form-group">
+                <i class="fal fa-eye password-toggle show-password"></i>
+                <input type="password" name="cpassword" placeholder="Confirm Password">
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="d-flex align-items-center justify-content-center">
+                <input type="checkbox" id="checkbox" name="checkbox" value="Remember Me">
+                <label class="mb-0" for="checkbox">By Selecting This You Agree to the
+                    <a href="#">Privacy Policy</a>
+                    and
+                    <a href="#">Cookie Policy</a>
+                </label>
+            </div>
+            <div class="text-center mt-3">
+                <button type="submit">Signup</button>
+            </div>
+            <div class="sigma_form-seperator">
+                <span>Or</span>
+            </div>
+            <div class="sigma_buttons text-center">
+                <button type="button" class="facebook">
+                    <i class="fab fa-facebook-f ml-0 mr-2"></i>
+                    Facebook
+                </button>
+                <button type="button" class="google">
+                    <i class="fab fa-google ml-0 mr-2"></i>
+                    Google
+                </button>
+            </div>
+        </div>
+    </div>
+</form>
+
             </div>
           </div>
         </div>
