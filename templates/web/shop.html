@@ -65,28 +65,29 @@
                     <div>
                       <div class="sigma_product style-2">
                         <div class="sigma_product-thumb">
-                          <a href="">
-                            <img src="{{product.image.url}}" alt="{{product.name}}">
+                          <a href="{% url 'web:single_page' product.id %}">
+                            <img src="{{ product.image.url }}" alt="#">
                           </a>
                           <div class="sigma_product-controls">
                             <a href="#" data-toggle="tooltip" title="Wishlist"><i class="far fa-heart"></i></a>
-                            <a href="#" data-toggle="tooltip" title="Add To Cart"><i class="far fa-shopping-basket"></i></a>
+                            <a href="#" data-toggle="tooltip" title="Add To Cart"><i
+                                class="far fa-shopping-basket"></i></a>
                             <a href="#" data-toggle="tooltip" title="Quick View"><i data-toggle="modal"
                                 data-target="#quickViewModal" class="far fa-eye"></i></a>
                           </div>
                         </div>
                         <div class="sigma_product-body">
                           <h5 class="sigma_product-title">
-                            
+                           
                             <a href="{% url 'web:single_page' product.id %}">{{ product.name }}</a>
-
+                            
                           </h5>
                           <div class="lang_author">
-                            <p>{{product.language}}</p>
-                            <p>{{product.author}}</p>
+                            <p>{{ product.language }}</p>
+                            <p>{{ product.author }}</p>
                           </div>
                           <div class="sigma_product-price">
-                            <span><span>$</span>{{product.price}}</span>
+                            <span><span>$</span>{{ product.price }}</span>
                           </div>
                         </div>
                       </div>
@@ -199,12 +200,12 @@
                     </div>
                   </div>
                   <div class="slider">
-                    
+
                   </div>
                   <div class="range-input">
                     <input type="range" class="range-min" min="0" max="500" value="25" step="100">
                     <input type="range" class="range-max" min="0" max="500" value="75" step="100">
-                </div>
+                  </div>
                 </div>
               </div>
               <!-- Filter: Price End -->
@@ -356,36 +357,36 @@
 
               <script>
                 const productRows = document.querySelectorAll('.tbody_classname.row tr');
-        const minInput = document.getElementById('minInput');
-        const maxInput = document.getElementById('maxInput');
-        const rangeMinInput = document.querySelector('.range-min');
-        const rangeMaxInput = document.querySelector('.range-max');
+                const minInput = document.getElementById('minInput');
+                const maxInput = document.getElementById('maxInput');
+                const rangeMinInput = document.querySelector('.range-min');
+                const rangeMaxInput = document.querySelector('.range-max');
 
-        // Add event listeners to the filter inputs
-        minInput.addEventListener('input', filterProducts);
-        maxInput.addEventListener('input', filterProducts);
-        rangeMinInput.addEventListener('input', updateRangeValues);
-        rangeMaxInput.addEventListener('input', updateRangeValues);
+                // Add event listeners to the filter inputs
+                minInput.addEventListener('input', filterProducts);
+                maxInput.addEventListener('input', filterProducts);
+                rangeMinInput.addEventListener('input', updateRangeValues);
+                rangeMaxInput.addEventListener('input', updateRangeValues);
 
-        function filterProducts() {
-            const minPrice = parseInt(minInput.value);
-            const maxPrice = parseInt(maxInput.value);
+                function filterProducts() {
+                  const minPrice = parseInt(minInput.value);
+                  const maxPrice = parseInt(maxInput.value);
 
-            productRows.forEach(row => {
-                const price = parseInt(row.querySelector('td').dataset.price);
-                if (price >= minPrice && price <= maxPrice) {
-                    row.style.display = '';
-                } else {
-                    row.style.display = 'none';
+                  productRows.forEach(row => {
+                    const price = parseInt(row.querySelector('td').dataset.price);
+                    if (price >= minPrice && price <= maxPrice) {
+                      row.style.display = '';
+                    } else {
+                      row.style.display = 'none';
+                    }
+                  });
                 }
-            });
-        }
 
-        function updateRangeValues() {
-            minInput.value = rangeMinInput.value;
-            maxInput.value = rangeMaxInput.value;
-            filterProducts();
-        }
+                function updateRangeValues() {
+                  minInput.value = rangeMinInput.value;
+                  maxInput.value = rangeMaxInput.value;
+                  filterProducts();
+                }
               </script>
               <!-- Category Widget -->
               <div class="widget widget-categories">
@@ -584,7 +585,7 @@
                     </p>
                   </div>
                   <hr>
-                  <form class="sigma_product-atc-form">
+                  {% comment %} <form class="sigma_product-atc-form">
                     <div class="sigma_product-buttons d-block">
                       <a href="{% url 'web:single_page' %}" class="ml-0 btn-block sigma_btn">Buy Now <i
                           class="far fa-shopping-basket"></i> </a>
@@ -593,7 +594,7 @@
                       <a href="{% url 'web:single_page' %}" class="ml-0 btn-block sigma_btn light">Compare <i
                           class="far fa-compress"></i> </a>
                     </div>
-                  </form>
+                  </form> {% endcomment %}
                   <!-- Post Meta Start -->
                   <div class="sigma_post-single-meta">
                     <div class="sigma_post-single-meta-item sigma_post-share">

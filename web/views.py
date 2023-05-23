@@ -9,7 +9,7 @@ from django.contrib.auth.models import User
 from django.contrib import messages
 
 # Create your views here.
-
+from .models import Product
 
 def index(request):
     context = {}
@@ -21,11 +21,10 @@ def shop(request):
     context = {"product": product}
     return render(request, 'web/shop.html', context)
 
-def single_page(request, id):
-    product = Product.objects.get(id=id)
+def single_page(request,id):
+    product = get_object_or_404(Product,id=id)
     context = {"product": product}
-    return render(request, 'web/product-details.html', context)
-
+    return render(request, 'web/single_page.html', context)
 
 
 

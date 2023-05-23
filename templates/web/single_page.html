@@ -38,7 +38,7 @@
           <div class="col-lg-5 col-md-6">
             <div class="sigma_product-single-thumb mb-lg-30">
               <div class="slider">
-                <img src="/static/web/img/product-details/440x540-3.jpg" alt="product">
+                <img src="{{ product.image.url }}" alt="product">
                 <img src="/static/web/img/product-details/440x540-4.jpg" alt="product">
                 <img src="/static/web/img/product-details/440x540-5.jpg" alt="product">
                 <img src="/static/web/img/product-details/440x540-6.jpg" alt="product">
@@ -54,7 +54,7 @@
           <div class="col-lg-7 col-md-6">
             <div class="sigma_product-single-content">
               <div class="sigma_product-price">
-                <span>352$</span>
+                <span>{{ product.price }}$</span>
                 <span>245$</span>
               </div>
               <div class="sigma_rating-wrapper">
