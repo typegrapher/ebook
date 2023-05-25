@@ -248,10 +248,10 @@
                   {% if user.is_authenticated %}
                   <button type="submit" class="sigma_btn-custom" name="button">Post Review</button>
                   {% else %}
-                  <div id="lamiz_display">
-                    <p id="lamiiz_buttun" data-toggle="tooltip" title="please login" class="lamiiz_buttun">Post Review
-                    </p>
+                  <div class="lamiz_display">
+                    <p class="lamiiz_buttun">Post Review</p>
                     <!-- <a href="" id="lamiiz_buttun_login" class="lamiiz_buttun_login">login now</a> -->
+                    <p class="lamiiz_buttun_login">Not login Login..!</p>
                   </div>
                   {% endif %}
                 </form>
@@ -263,9 +263,11 @@
                 }
 
 
+                .lamiz_display {
+                  display: inline;
+                }
 
-                .lamiiz_buttun,
-                .lamiiz_buttun_login {
+                .lamiiz_buttun {
                   display: inline-block;
                   text-align: center;
                   white-space: nowrap;
@@ -302,11 +304,11 @@
                   transition: 0.3s;
                 }
 
-                #lamiz_display #lamiiz_buttun_login {
+                .lamiz_display .lamiiz_buttun_login {
                   visibility: hidden;
                 }
 
-                #lamiz_display:hover #lamiiz_buttun_login {
+                .lamiz_display:hover .lamiiz_buttun_login {
                   visibility: visible;
                 }
               </style>
